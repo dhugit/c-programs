@@ -17,13 +17,14 @@ int main () {
         r2=rand() % 100;
        //printf("%d\n", r);
        if ( abs(r1-r2) < 50 )  count++  ;
+       if ( r1 < 50 )  count1++  ;
        //if ( r1 == 0 )  count++  ;
        //if ( r1 == 50 )  count1++  ;
        //if ( r1 == 99 )  count2++  ;
    }
    
    printf("count=%d\n", count);
-   //printf("count1=%d\n", count1);
+   printf("count1=%d\n", count1);
    //printf("count2=%d\n", count2);
    return(0);
 }
