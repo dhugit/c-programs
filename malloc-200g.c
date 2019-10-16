@@ -6,7 +6,7 @@ int main()
 {
         int i=0;
         char *buf[300];
-        while(i<300)
+        while(i<200)
         {
                 printf("i=%d\n",i);
                 buf[i] = (char*)malloc(BLOCK_SIZE);
