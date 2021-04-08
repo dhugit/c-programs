@@ -27,7 +27,7 @@
 }
 */
 
-int isPerfectSquare(int n)
+/* int isPerfectSquare(int n)
 {
   int i; 
   for (i=1; i*i <=n; i++) {
@@ -39,6 +39,31 @@ int isPerfectSquare(int n)
     }
   }
   return 0;
+}
+*/
+
+int isPerfectSquare(int x)
+{
+ long left=1, right=x;
+
+ while (left <=right)
+ {
+    long mid = (left + right)/2;
+    if (mid*mid == x)
+    {
+	return 1;
+    }
+
+    if (mid*mid < x)
+    {
+       left = mid +1;
+    }
+    else
+    {
+	right=mid-1;
+    }
+  }
+  return 0; 
 }
 
 int main()
