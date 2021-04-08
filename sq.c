@@ -1,6 +1,16 @@
 #include <stdio.h>
 #include <math.h>
 
+
+/*  to compile
+ *  cc sq.c -lm 
+ *
+ *  to run:
+ *  ./a.out
+ *  or ./a.out > sq.out
+ *  cat sq.out |awk {'print $2'}|sort -n|uniq -c|less 
+ */
+
 /*function definition*/
 /* int isPerfectSquare(int number)
 {
@@ -37,8 +47,8 @@ int main()
 
  isPerfectSquare(9);
 
- for (a=2; a< 10000; a++)
-   for (b=a+1; b<=10000; b++)
+ for (a=2; a< 1000; a++)
+   for (b=a+1; b<=1000; b++)
    {
 	s=a*a+b*b+a*b*6;
 	if (isPerfectSquare(s)) {
