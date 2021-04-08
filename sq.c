@@ -42,13 +42,13 @@
 }
 */
 
-int isPerfectSquare(int x)
+int isPerfectSquare(unsigned long long int x)
 {
- long left=1, right=x;
+ unsigned long long int left=1, right=x;
 
  while (left <=right)
  {
-    long mid = (left + right)/2;
+    unsigned long long int mid = (left + right)/2;
     if (mid*mid == x)
     {
 	return 1;
@@ -68,15 +68,19 @@ int isPerfectSquare(int x)
 
 int main()
 {
- int a,b,c,s;
+ unsigned long long a,b,c,s, s1;
 
- for (a=2; a< 10000; a++)
-   for (b=a+1; b<=10000; b++)
+ for (a=2; a< 50000; a++)
+   for (b=a+1; b<=50000; b++)
    {
 	s=a*a+b*b+a*b*6;
 	if (isPerfectSquare(s)) {
-                c=(sqrt((double)s)-a-b)/2;
-		printf("c= %d a=%d b=%d s=%d\n", c,a,b,s);
+              s1=(sqrt((double)s)-a-b);
+              if ( s1%2 == 0) 
+              {
+                c=s1/2;
+		printf("c= %llu a=%llu b=%llu s=%llu\n", c,a,b,s);
+              }
         }
    }
 }	
