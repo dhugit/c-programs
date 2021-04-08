@@ -70,10 +70,8 @@ int main()
 {
  int a,b,c,s;
 
- isPerfectSquare(9);
-
- for (a=2; a< 1000; a++)
-   for (b=a+1; b<=1000; b++)
+ for (a=2; a< 10000; a++)
+   for (b=a+1; b<=10000; b++)
    {
 	s=a*a+b*b+a*b*6;
 	if (isPerfectSquare(s)) {
